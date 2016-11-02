@@ -2,10 +2,81 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">  
+    <link rel="shortcut icon" href="images/favicon1.ico" type="image/x-icon">
+    <link rel="icon" href="images/favicon1.ico" type="image/x-icon">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet"  type="text/css" href="css/font-awesome/css/font-awesome.min.css">    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/ranch.css">
+    <link rel="stylesheet" type="text/css" href="css/common.css">
     <title>Cowley Ranch Client</title>
   </head>
-  <body>
-  <h1>Cowley Ranch Client</h1>
+  <body ng-app="ranch" ng-strict-di>
+  <header>
+      
+    <h1 class=ranch-title>
+        <span>
+            <a ui-sref="public.home"><img class=ranch-brand src="images/7CBrand_clipped.png"></a>
+        </span>
+        <span class="bold-brown">Cowley </span>Ranch Resources</h1>
+      
+    <div class="dropdown">
+       <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Maintenance
+       </button>
+       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" ui-sref="resource.balecode-list">Bale Codes</a>
+          <a class="dropdown-item" ui-sref="resource.haytypes-list">Hay Types</a>
+          <a class="dropdown-item" ui-sref="resource.cuttingcodes-list">Cutting Codes</a>
+          <a class="dropdown-item" ui-sref="resource.fieldtypes-list">Field Types</a>
+          <a class="dropdown-item" ui-sref="resource.fields-list">Fields</a>
+          <a class="dropdown-item" ui-sref="resource.fieldacres-list">Field Acres</a>
+       </div>
+    </div>
+  </header>
+  
+  <ui-view>
+    <div class="text-center initial-loading">
+      <h2>Loading Site...</h2>
+    </div>
+  </ui-view>
+      
+   <footer>
+      
+   </footer>   
+      
+   <!-- Libs -->
+    <script src="lib/jquery-3.1.1.min.js"></script>
+    <script src="lib/bootstrap.min.js"></script>
+    <script src="lib/angular.min.js"></script>
+    <script src="lib/angular-ui-router.min.js"></script>
 
+    <!-- Main Restaurant Module -->
+    <script src="src/ranch.module.js"></script>
+
+    <!-- Common Module -->
+    <script src="src/common/common.module.js"></script>
+    <script src="src/common/hay.mgr.data.service.js"></script>
+
+    <!-- resource Module -->
+    <script src="src/resource/resource.module.js"></script>
+    <script src="src/resource/resource.routes.js"></script>
+
+    <script src="src/resource/haymaint/balecodes/bc-list.controller.js"></script>
+    <script src="src/resource/haymaint/haytypes/ht-list.controller.js"></script>
+    <script src="src/resource/haymaint/cuttingcodes/cc-list.controller.js"></script>
+    <script src="src/resource/haymaint/fieldtypes/ft-list.controller.js"></script>
+    <script src="src/resource/haymaint/fieldacres/fa-list.controller.js"></script>
+    <script src="src/resource/haymaint/fields/f-list.controller.js"></script>
+      
+    <!-- Public Module -->
+    <script src="src/public/public.module.js"></script>
+    <script src="src/public/public.routes.js"></script>
+
+    <!-- Admin Module -->
+    <script src="src/admin/admin.module.js"></script>
+    <script src="src/admin/admin.routes.js"></script>
+      
+      
   </body>
 </html>

@@ -1,0 +1,7 @@
+<h3>Bale Code List</h3>
+<ul>
+  <li ng-repeat="entry in bcList.entries"
+      ui-sref="resource.balecode-list.entry({entryId: $index})">
+    {{ entry.description }}  {{ entry.abbreviation }}  {{ entry.status }}  {{ entry.weight }}
+  </li>
+</ul>

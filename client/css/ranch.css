@@ -1,0 +1,63 @@
+/* Colors
+
+d19f8e rgb(209,159,142)
+
+643119 rgb(100,49,25)
+
+
+rgba(19, 128, 36, 0.54);
+
+*/
+
+html, 
+body {
+    height: 100%;
+    font-size: 16px;
+    font-family: 'Cubano-Regular';
+    background: url('../images/leather_1.png') center center;
+}
+
+/* FONT FACES */
+
+
+@font-face {
+    font-family: 'Cubano-Regular';
+    src: local('Cubano-Regular.otf'), url('Cubano-Regular.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Nunito-Regular';
+    src: local('Nunito-Regular.ttf'), url('Nunito-Regular.ttf') format('truetype');
+}
+
+.ranch-title {
+    font-family: 'Cubano-Regular';
+    font-size: 3rem;
+    margin-top: 5px;
+    margin-left: 10px;
+    text-align: left;
+}
+
+.ranch-brand {
+    background: transparent;
+    margin-top: -5px;
+    margin-left: 5px;
+    margin-right: 10px;
+
+}
+
+
+/* SPANS */
+
+
+.bold-brown {
+    color: rgba(100,49,25, 0.9);
+}
+
+.brown-underline {
+    border-bottom: 1px solid rgba(100,49,25, 0.9);
+}
+
+.initial-loading {
+  margin-top: 60px;
+}

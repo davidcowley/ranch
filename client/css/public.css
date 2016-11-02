@@ -1,0 +1,12 @@
+/* Public */
+
+.home-image {
+    width: 1000px;
+    height: 500px;
+
+    display: block;
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto    
+    
+}
